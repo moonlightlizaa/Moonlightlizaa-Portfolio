@@ -24,6 +24,12 @@
 </header>
 
 <style>
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
     header {
     min-height: 100%;
     width: auto;
