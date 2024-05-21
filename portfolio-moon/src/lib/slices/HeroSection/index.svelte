@@ -11,7 +11,8 @@ import { PrismicRichText } from '@prismicio/svelte';
     <section class="scene">
         <section class="home">
             <section class="canvas">
-				{@html slice.primary.spline_link.html}
+					<script type="module" src="https://unpkg.com/@splinetool/viewer@1.3.5/build/spline-viewer.js"></script>
+					<spline-viewer loading-anim-type="spinner-small-dark" url="https://prod.spline.design/M5QYIxncM4JfLx4i/scene.splinecode"></spline-viewer>
                 <section class="canvas-gradient">
                 </section>
             </section>
@@ -130,5 +131,29 @@ import { PrismicRichText } from '@prismicio/svelte';
     width: 386px;
     word-break: break-word;
     word-wrap: break-word;
+}
+
+@media (max-width: 750px) {
+
+	.canvas-gradient {
+		background: linear-gradient(180deg,#F0DEE2 0%,rgba(240,222,226,0) 100%);
+		bottom: unset;
+		height: 91px;
+		right: 0;
+		top: 155px;
+		width: unset;
+	}
+	
+	.header-intro {
+		align-content: center;
+		align-items: center;
+		height: min-content;
+		left: 0;
+		padding: 0 16px;
+		top: 34px;
+		width: 100%;
+	}
+
+
 }
 </style>
