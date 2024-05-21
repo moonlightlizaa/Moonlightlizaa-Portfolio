@@ -133,27 +133,70 @@ import { PrismicRichText } from '@prismicio/svelte';
     word-wrap: break-word;
 }
 
-@media (max-width: 750px) {
+@media (min-width: 810px) and (max-width: 1199px) {
 
-	.canvas-gradient {
-		background: linear-gradient(180deg,#F0DEE2 0%,rgba(240,222,226,0) 100%);
-		bottom: unset;
-		height: 91px;
-		right: 0;
-		top: 155px;
-		width: unset;
-	}
-	
-	.header-intro {
-		align-content: center;
-		align-items: center;
-		height: min-content;
-		left: 0;
-		padding: 0 16px;
-		top: 34px;
-		width: 100%;
-	}
+.scene {
+    bottom: unset;
+    height: 105vh;
+    left: 0;
+    right: unset;
+    width: 100%;
+}
 
+.home {
+    flex: none;
+    inset: 0 0 0 0px;
+    overflow: hidden;
+    position: absolute;
+}
+
+.canvas {
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.canvas-gradient {
+    background: linear-gradient(90deg,#F4DDE2 0%,rgba(240,222,226,0) 100%);
+    bottom: unset;
+    height: 178px;
+    right: 0;
+    top: 210px;
+    width: unset;
+}
+
+.header-intro {
+    align-content: center;
+    align-items: center;
+    height: min-content;
+    left: 50%;
+    top: 85px;
+    transform: translate(-50%);
+}
+
+.header-intro-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    transform: none;
 
 }
+
+.header-intro-bio {
+    outline: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    transform: none;
+}
+    
+}
+
+
 </style>
