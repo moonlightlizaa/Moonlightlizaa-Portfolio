@@ -44,7 +44,7 @@ import { PrismicRichText } from '@prismicio/svelte';
     flex: none;
     flex-direction: column;
     flex-wrap: nowrap;
-    gap: 50px;
+    gap: 30px;
     height: 1993px;
     justify-content: flex-start;
     overflow: visible;
@@ -161,11 +161,10 @@ import { PrismicRichText } from '@prismicio/svelte';
 }
 
 .canvas-gradient {
-    background: linear-gradient(90deg,#F4DDE2 0%,rgba(240,222,226,0) 100%);
+    background: linear-gradient(180deg,#f9dce2 0%,rgba(240,222,226,0) 100%);
     bottom: unset;
-    height: 178px;
+    height: 300px;
     right: 0;
-    top: 210px;
     width: unset;
 }
 
@@ -174,8 +173,9 @@ import { PrismicRichText } from '@prismicio/svelte';
     align-items: center;
     height: min-content;
     left: 50%;
-    top: 85px;
+    top: 50px;
     transform: translate(-50%);
+    text-align: center;
 }
 
 .header-intro-title {
@@ -197,6 +197,74 @@ import { PrismicRichText } from '@prismicio/svelte';
 }
     
 }
+
+@media (max-width: 810px) {
+    .scene {
+    bottom: unset;
+    height: 105vh;
+    left: 0;
+    right: unset;
+    width: 100%;
+}
+
+.home {
+    flex: none;
+    inset: 0 0 0 0px;
+    overflow: hidden;
+    position: absolute;
+}
+
+.canvas {
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.canvas-gradient {
+    background: linear-gradient(180deg,#f9dce2 0%,rgba(240,222,226,0) 100%);
+    bottom: unset;
+    height: 300px;
+    right: 0;
+    width: unset;
+}
+
+.header-intro {
+    align-content: center;
+    align-items: center;
+    height: min-content;
+    left: 50%;
+    top: 50px;
+    transform: translate(-50%);
+    text-align: center;
+
+    font-size: 26px;
+}
+
+.header-intro-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    transform: none;
+
+    font-size: 36px;
+
+}
+
+.header-intro-bio {
+    outline: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    transform: none;
+}
+}
+
 
 
 </style>
