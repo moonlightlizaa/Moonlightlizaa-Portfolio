@@ -3,6 +3,11 @@
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+		
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		%sveltekit.head%
 	</head>
@@ -17,6 +22,53 @@
 	* {
 		padding: 0;
 		margin: 0;
+		font-family: "Poppins", sans-serif;
+		color: #323232;
 	}
+
+	#repos-container {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1.25rem;
+		justify-content: center;
+	}
+
+	.repository{
+		background: #f5f5f5;
+		padding: 2em;
+		width: 400px;
+		height: 200px;
+		border-radius: 1em;
+	}
+
+	h1 {
+		font-size: 50px;
+		font-weight: 700;
+
+	}
+
+	h2 {
+		font-size: 32px;
+		font-weight: 700;
+
+	}
+
+	h3 {
+		font-size: 26px;
+		font-weight: 500;
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+	article a {
+		font-size: 14px;
+	}
+
+	article p {
+		font-size: 16px;
+	}
+
 
 </style>

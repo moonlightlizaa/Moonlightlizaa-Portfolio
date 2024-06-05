@@ -7,9 +7,9 @@
 
 onMount(() => {
 
-			// GitHub API laat maar 30 zien bij default
-			// Verander username
-	const apiUrl = `https://api.github.com/users/moonlightlizaa/repos?sort=updated&per_page=50`;
+		// GitHub API laat maar 30 zien bij default
+		// Verander username
+			const apiUrl = `https://api.github.com/users/moonlightlizaa/repos?sort=updated&per_page=50`;
 
 	
 	fetch(apiUrl)
@@ -18,7 +18,7 @@ onMount(() => {
 			repos = repos.map((repo) => {
 				return {
 					...repo,
-					name: repo.name.replace(/-/g, ' ')
+					name: repo.name.replace(/-/g, ' ') // deze line zorgt ervoor dat er spaties staan ipv - 
 				};
 			});
 
@@ -33,24 +33,22 @@ onMount(() => {
 
 			const container = document.getElementById('repos-container');
 			repos.forEach((repo) => {
-				const repository = document.createElement('div');
+				const repository = document.createElement('section');
 				repository.className = 'repository';
 				repository.innerHTML = `
+					
+					<h3> 
+						<a href="${repo.html_url}" target="_blank">${repo.name}</a>
+					<h3>
+				<article>
+					<a href="${repo.homepage}" target="_blank"> ${repo.homepage || 'no link available'} </a>
+					
+					<p>${repo.description || 'No description available.'} </p>
+				</article>
 
-		 	 <h2>
-				<a href="${repo.html_url}" target="_blank">${repo.name}</a>
-			</h2>
 
-		  	<p>
-				<a href="${repo.homepage}" target="_blank">${repo.homepage || 'no link available'}</a>
-			</p>
-
-		 	 <p>${repo.description || 'No description available.'}
-
-			</p>
-
-	  <section>⭐ ${repo.stargazers_count} | 👁️ ${repo.watchers_count} | 🍴 ${repo.forks_count}</section>
-	  `;
+				
+				`;
 				container.appendChild(repository);
 			});
 		})
@@ -58,8 +56,8 @@ onMount(() => {
 });
 </script>
 
-<section class="other">
-	<h1>Alle repo's</h1>
+<section class="github-portfolio">
+	<h2>my work on github ✨</h2>
 
 	<nav>
 		<input
@@ -75,3 +73,9 @@ onMount(() => {
 </section>
 
 
+<style>
+	.github-portfolio {
+		height: 101vh;
+		margin: 1em;
+	}
+</style>
