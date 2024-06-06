@@ -7,3 +7,4 @@
 <SliceSimulator let:slices>
 	<SliceZone {slices} {components} />
 </SliceSimulator>
+
