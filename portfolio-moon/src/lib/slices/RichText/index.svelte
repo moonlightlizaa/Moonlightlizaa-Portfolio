@@ -38,12 +38,13 @@ onMount(() => {
 				repository.innerHTML = `
 					
 					<h3> 
-						<a href="${repo.html_url}" target="_blank">${repo.name}</a>
+						<a href="${repo.html_url}" target="_blank" class="repo-name">${repo.name}</a>
 					<h3>
 				<article>
-					<a href="${repo.homepage}" target="_blank"> ${repo.homepage || 'no link available'} </a>
-					
+				
 					<p>${repo.description || 'No description available.'} </p>
+
+					<a href="${repo.homepage}" target="_blank" class="live-button"> ${"Live Site" || 'no link available'} </a>
 				</article>
 
 
@@ -54,6 +55,8 @@ onMount(() => {
 		})
 		.catch((error) => console.error('Error fetching repos:', error));
 });
+
+
 </script>
 
 <section class="github-portfolio">
@@ -65,7 +68,7 @@ onMount(() => {
 			type="text"
 			id="searchInput"
 			onkeyup="search()"
-			placeholder="Zoek een repo..."
+			placeholder="Zoek een repository.."
 		/>
 	</nav>
 
@@ -75,7 +78,17 @@ onMount(() => {
 
 <style>
 	.github-portfolio {
-		height: 101vh;
+		height: 100vh;
 		margin: 1em;
 	}
+
+	.searchbar {
+		padding: 1em;
+		margin: 2em;
+		width: 430px;
+		border-radius: 10px;
+		border-width: 0.5px;
+	}
+
 </style>
+

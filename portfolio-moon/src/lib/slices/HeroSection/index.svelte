@@ -51,6 +51,8 @@ import { PrismicRichText } from '@prismicio/svelte';
     padding: 0;
     position: relative;
     width: 100%;
+
+    margin-bottom: 100px;
 }
 
 .scene {
@@ -268,3 +270,4 @@ import { PrismicRichText } from '@prismicio/svelte';
 
 
 </style>
+
