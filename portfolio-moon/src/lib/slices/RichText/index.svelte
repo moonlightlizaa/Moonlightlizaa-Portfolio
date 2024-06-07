@@ -62,16 +62,6 @@ onMount(() => {
 <section class="github-portfolio">
 	<h2>my work on github ✨</h2>
 
-	<nav>
-		<input
-			class="searchbar"
-			type="text"
-			id="searchInput"
-			onkeyup="search()"
-			placeholder="Zoek een repository.."
-		/>
-	</nav>
-
 	<ul id="repos-container"></ul>
 </section>
 
