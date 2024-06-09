@@ -248,11 +248,6 @@
 
 			/* basics */
 
-	nav {
-		margin-bottom: 25px;
-		display: flex;
-		flex-direction: row-reverse;
-	}
 
 	#repos-container {
 		display: flex;
@@ -266,8 +261,29 @@
 		background: #f5f5f5;
 		padding: 2em;
 		width: 400px;
-		height: 200px;
 		border-radius: 1em;
+		display: grid;
+			grid:
+				"title" 0.5fr
+				"bio" 1fr
+				"button" 0.5fr
+				/ 1fr;
+			gap: 10px;
+	}
+
+	.repository h3 {
+		color: #ff7c9b; !important
+		grid-area: title;
+	}
+
+	.repo-bio {
+	
+		grid-area: bio;
+	}
+
+	.repo-button {
+		padding-top: 1em;
+		grid-area: button;
 	}
 
 
@@ -286,14 +302,12 @@
 	}
 
 	h3 {
-		font-size: 26px;
+		font-size: 24px;
 		font-weight: 500; 
 	
 	}
 
-	.repo-name {
-		color: #ff7c9b; !important
-	}
+
 
 	.live-button {
 		padding: 10px;

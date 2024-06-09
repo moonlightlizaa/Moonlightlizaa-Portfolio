@@ -36,17 +36,18 @@ onMount(() => {
 				const repository = document.createElement('section');
 				repository.className = 'repository';
 				repository.innerHTML = `
-					
-					<h3> 
-						<a href="${repo.html_url}" target="_blank" class="repo-name">${repo.name}</a>
-					<h3>
-				<article>
 				
-					<p>${repo.description || 'No description available.'} </p>
+				
+					<h3><a href="${repo.html_url}" target="_blank" class="repo-name">${repo.name}</a></h3>
+					
+					<section class="repo-bio">
+						<p>${repo.description || 'No description available.'} </p>
+					</section>
 
-					<a href="${repo.homepage}" target="_blank" class="live-button"> ${"Live Site" || 'no link available'} </a>
-				</article>
-
+					<section class="repo-button">
+						<a href="${repo.homepage}" target="_blank" class="live-button"> ${"Live Site" || 'no link available'} </a>
+					</section>
+				
 
 				
 				`;
@@ -60,7 +61,10 @@ onMount(() => {
 </script>
 
 <section class="github-portfolio">
-	<h2>my work on github ✨</h2>
+	<section class="portfolio-title">
+		<h2>my work on github ✨</h2>
+	</section>
+	
 
 	<ul id="repos-container"></ul>
 </section>
@@ -72,13 +76,10 @@ onMount(() => {
 		margin: 1em;
 	}
 
-	.searchbar {
-		padding: 1em;
-		margin: 2em;
-		width: 430px;
-		border-radius: 10px;
-		border-width: 0.5px;
+	.portfolio-title {
+		margin-bottom: 4em;
 	}
+
 
 </style>
 
